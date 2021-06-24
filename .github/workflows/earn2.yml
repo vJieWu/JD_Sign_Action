@@ -36,6 +36,30 @@ jobs:
               
             - name: Run Script
               run: node jd_jdzz.js
+              
+            - name: Run JD_club_lottery
+              run: node jd_club_lottery.js
+              
+            - name: Run JD_cash
+              run: node jd_cash.js
+              
+            - name: Run JD_fruit
+              run: node jd_fruit.js
+              
+            - name: Run JD_plantBean.js
+              run: node jd_plantBean.js
+              
+            - name: Run jd_speed
+              run: node jd_speed.js
+              
+            - name: Run unsubscribe
+              run: node jd_unsubscribe.js
+            
+            - name: Run jd_syj
+              run: node jd_syj.js
+              
+            - name: Run jx
+              run: node jx_sign.js
                 
             - name: Upload result file
               uses: actions/upload-artifact@master
