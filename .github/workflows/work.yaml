@@ -37,9 +37,12 @@ jobs:
             - name: Run Script
               run: node jd_sign.js
 
-            - name: Run Script jd_fruit
-              run: node jd_fruit.js
-                
+            - name: Run Script unsub
+              run: node jd_unsubscribe.js
+              
+            - name: Run Script jd_speed_sign.js
+              run: node jd_speed_sign.js
+              
             - name: Upload result file
               uses: actions/upload-artifact@master
               if: env.UPLOAD_BESULT_DIR == 'true'
