@@ -35,12 +35,16 @@
 * 如果配置了Server酱，运行结果会推送到微信；
 
 ## 获取京东cookie
-
-* 使用项目中的Chrome插件：`JDCookie`；
-* Chrome中拓展程序开启`开发者模式`；
-* 点击`加载已解压的拓展程序`，选择`JDCookie`目录；
-* 登录[领京豆](https://bean.m.jd.com/)；
-* 点击`JDCookie`即可拷贝京东cookie；
+* 打开m.jd.com
+* F12开发模式,设备选择手机模式,手机验证码登录(有效期1month)
+* 选择Network,找到log.gif?开头的请求,在Headers中复制cookie字段的值
+* 在console中执行下面命令
+```javascript
+var CV = '单引号里面放上面拿到的cookie';
+var CookieValue = CV.match(/pt_pin=.+?;/) + CV.match(/pt_key=.+?;/);
+copy(CookieValue);
+``` 
+* 获取cookie之后,配置到jdCookie.js中
 
 ## 获取Server酱SCKEY
 
